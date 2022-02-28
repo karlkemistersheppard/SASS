@@ -1,0 +1,25 @@
+
+
+
+@import "home";
+body{
+    background-color: coral;
+    font-size: 25px;
+}
+
+section{
+    background-color:gray;
+
+h1{
+        font-size:60px;
+        &:hover{
+            color:aqua;
+        }
+}
+p{
+    font-style: italic;
+    span{
+        color:red;
+    }
+}
+}
