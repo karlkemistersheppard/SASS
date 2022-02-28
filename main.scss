@@ -1,25 +1,41 @@
 
+// The below is how to add in multiple scss styling sheets to your css to keep your code dry and clean//
 
-
+@import "mixins";
+@import "variables";
 @import "home";
+
+//This is how you add a mixin to your styling sheet- the @ represents the mixin the include means its local scss styling sheet- followed by the mixin.name created.// 
+//The () allows you to add arguments to the mixin.//
+//The below example allows you to add a mixin to a header element- but allows you to style it via the mixin master scss sheet.//
+header{
+@include main-background(30px,40px);    
+}
+
+footer{
+@include main-background(30px,50px);
+}
+
+//The below is a example of adding a variable to the body via the master variable scss sheet.  To define a variable it must start with the $ stymbol followed by the name.//
 body{
-    background-color: coral;
+    background-color: $section-backgroundcolor;
     font-size: 25px;
 }
 
 section{
     background-color:gray;
 
+    //This is another example of adding a $variable to a nested h1 class using scss//
 h1{
         font-size:60px;
         &:hover{
-            color:aqua;
+            color:$hover-color;
         }
 }
 p{
     font-style: italic;
     span{
-        color:red;
+        color:$ascent-color;
         font-size: 20px;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }

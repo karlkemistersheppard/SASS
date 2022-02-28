@@ -1,0 +1,11 @@
+
+//The below is a example of creating a @mixin to add to your scss SASS styling sheet.//
+//The @mixin is the key followed by the name selector followed by the () so you have the option to add a argument such as $padding, or $font-size as below//
+//Adding the arguments allows you to adjust the conditions on the @include elements as seen in the main.scss file where you pass a specific value and it overrides the master in the main.css.//@at-root
+//This allows you to define each element to the finest detail//
+@mixin main-background($padding,$font-size){
+    padding: $padding;
+    text-align: center;
+    font-size:$font-size;
+    color: green;
+}
